@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-height: 100%;
+}
+body {
+  font-family: Poppins;
+  background-repeat: no-repeat;
+  background: linear-gradient(#b5e48c, #457b9d);
+}
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  height: 100%;
+  position: relative;
+}
+.container h1 {
+  font-size: 60px;
+  color: rgb(198, 19, 123);
+  padding: 30px;
+}
+.inputdiv {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 42px;
+}
+.inputdiv input {
+  font-size: 20px;
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  display: block;
+  outline: none;
+  transition: 0.1 ease;
+  border-radius: 5px;
+}
+.inputdiv input:focus {
+  outline: 2px solid rgb(198, 19, 123);
+}
+.addtask {
+  background: rgb(118, 98, 232);
+  height: 42px;
+  padding: 7px 20px;
+  border: none;
+  font-size: 18px;
+  width: 68px;
+  margin-left: 43px;
+  border-radius: 5px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+.taskul {
+  margin-top: 30px;
+  position: relative;
+  margin-left: 42px;
+}
+
+ul li {
+  display: grid;
+  grid-template-columns: 30px 400px 30px 30px;
+  width: 85%;
+  margin-top: 10px;
+  list-style: none;
+  padding: 20px 10px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  margin-top: 2px;
+  height: 20px;
+  width: 21px;
+  background-image: url(./img/png-clipart-circle-thin-angle-white.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+ul li.checked {
+  color: rgb(153, 151, 151);
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(./img/checked.png);
+}
+ul li span {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  font-size: 29px;
+  color: rgb(6, 29, 29);
+}
+ul li span:hover {
+  background: gray;
+  color: #fff;
+  transition: 0.9 ease-in;
+  border-radius: 5px;
+  cursor: pointer;
+}
